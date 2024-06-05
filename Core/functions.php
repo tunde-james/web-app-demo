@@ -49,3 +49,8 @@ function redirect($auth)
   header("location: {$auth}");
   exit();
 }
+
+function old($key, $default = '')
+{
+  return Core\Session::get('old')[$key] ?? $default;
+}
